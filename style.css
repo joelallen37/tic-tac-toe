@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous';
+}
+
+:root {
+    /*--orange: #F2C14E; -- creates a variable which can be refed elsewhere */ 
+    /* --winning-blocks: #70D9D4; */
+    --winning-blocks: #2F3855;
+    /* #2D414B */
+    --OText: #EB8D6F;
+}
+
+h1 {
+    font-size: 54px; 
+    text-transform: uppercase;
+    color: #EB8D6F;
+}
+
+h2 {
+    margin-top:40px;
+    color: #F4F4FC;
+    text-transform: uppercase;
+    /* color: #3B4849; */
+}
+.container {
+    padding: auto 40px; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    /* background-color: #E8F3F4; */
+    background-color: #24293E;
+}
+
+#gameboard {
+    width: 450px; 
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    /* color: #3B4849; */
+    color: #F4F4FC;
+    
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 120px;
+    border-right: 8px solid #EB8D6F;
+    border-bottom: 8px solid #EB8D6F;
+
+}
+
+/* for each third child of box... */ 
+.box:nth-child(3n) { 
+    border-right: none; 
+}
+
+/* counting every child up to the 6th, after that ... */
+.box:nth-child(6) ~ .box { 
+    border-bottom: none; 
+}  
+
+.box:nth-child(1) {
+    border-top-left-radius: 32px;
+}
+
+.box:nth-child(3) {
+    border-top-right-radius: 32px;
+}
+
+.box:nth-child(7) {
+    border-bottom-left-radius: 32px; 
+}
+
+.box:nth-child(9) {
+    border-bottom-right-radius: 32px;
+}
+
+button {
+    margin-top: 40px;
+    padding: 10px 20px; 
+    border-radius: 10px;
+    background-color: #EB8D6F;
+    color: #3B4849;;
+    border-color: #EB8D6F;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    cursor:pointer;
+    transform: translateY(-2px);
+}
